@@ -1,12 +1,14 @@
 {
   "root": true,
-  "extends": ["@andreidmt/eslint-config/targets/node"],
+  "extends": [
+    "@andreidmt/eslint-config/targets/node"
+  ],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
   "rules": {
     // Since Metalsmith plugins are based on mutating a global state files
-    // array, passed in a callback, this rule is more of a nuisance than a help.
-    "no-param-reassign": "off",
+    // array, passed in a callback, this rule is more of a nuisance than a help
+    "no-param-reassign": "off"
   }
 }

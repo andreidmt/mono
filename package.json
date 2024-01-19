@@ -16,6 +16,7 @@
     "update": "ncu --interactive --workspaces --root",
     "postupdate": "npm audit fix --audit-level=high",
     "format": "lerna run format",
+    "new-package": "plop --plopfile .plop/new-package.js",
     "----CODE-ANALYSIS": "",
     "lint": "lerna run lint",
     "typecheck": "lerna run typecheck",
@@ -46,6 +47,7 @@
     "lint-staged": "^15.2.0",
     "markdownlint-cli": "^0.38.0",
     "npm-check-updates": "^16.14.12",
+    "plop": "^4.0.1",
     "prettier": "^3.2.4",
     "semantic-release": "^23.0.0",
     "typescript": "^5.3.3"

@@ -3,7 +3,7 @@
   "sourceMaps": false,
   "env": {
     "mode": "entry",
-    "coreJs": 3,
+    "coreJs": "3",
     "targets": {
       "node": "18"
     }
@@ -13,8 +13,8 @@
     "minify": {
       "format": {
         "comments": "all"
-      },
-    }
+      }
+    },
     "parser": {
       "syntax": "typescript",
       "dynamicImport": true

@@ -1,8 +1,8 @@
 {
-  "name": "${name}",
+  "name": "{{ name }}",
   "version": "1.0.0",
-  "description": "${description}",
-  "license": "MIT",
+  "description": "{{ description }}",
+  "license": "BSD-3-Clause",
   "author": {
     "name": "Andrei Dumitrescu",
     "url": "https://github.com/andreidmt",
@@ -11,10 +11,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/andreidmt/mono.git",
-    "directory": "packages/@metalreact/${monorepo-path}"
+    "directory": "packages/{{ domain }}/{{ name }}"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/metalreact",
+    "registry": "https://npm.pkg.github.com/{{ domain }}",
     "access": "public"
   },
   "files": [
@@ -40,10 +40,8 @@
     "prebuild": "npm run clean",
     "build": "npm run build:types"
   },
-  "dependencies": {
-  },
-  "devDependencies": {
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "peerDependencies": {
     "metalsmith": "^2.6.0"
   }
