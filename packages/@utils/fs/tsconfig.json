@@ -1,7 +1,9 @@
 {
   "extends": "@andreidmt/ts-config/node",
-  "include": ["src"],
+  "include": [
+    "src"
+  ],
   "compilerOptions": {
-    "rootDir": "./",
+    "rootDir": "./"
   }
 }

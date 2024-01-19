@@ -1,9 +1,10 @@
 {
   "root": true,
-  "extends": ["@andreidmt/eslint-config/targets/react"],
+  "extends": [
+    "@andreidmt/eslint-config/targets/react"
+  ],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "rules": {
-  }
+  "rules": {}
 }

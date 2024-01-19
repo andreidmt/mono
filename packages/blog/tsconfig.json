@@ -1,7 +1,10 @@
 {
   "extends": "@andreidmt/ts-config/react",
-  "include": ["src", "metalsmith.js"],
+  "include": [
+    "src",
+    "metalsmith.js"
+  ],
   "compilerOptions": {
-    "rootDir": "./",
+    "rootDir": "./"
   }
 }
