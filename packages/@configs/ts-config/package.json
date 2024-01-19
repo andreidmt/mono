@@ -1,0 +1,21 @@
+{
+  "name": "@andreidmt/ts-config",
+  "version": "1.0.0",
+  "description": "Andrei Dumitrescu's Typescript config",
+  "license": "MIT",
+  "author": {
+    "name": "Andrei Dumitrescu",
+    "url": "https://github.com/andreidmt",
+    "email": "andrei.dumitrescu@pm.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreidmt/mono.git",
+    "directory": "packages/@configs/ts-config"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/andreidmt",
+    "access": "public"
+  },
+  "scripts": {}
+}

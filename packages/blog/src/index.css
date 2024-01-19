@@ -1,0 +1,24 @@
+@import url("./css/_fonts.css");
+@import url("./css/_gruvbox.variables.css");
+@import url("./css/_gruvbox.code.css");
+@import url("./css/_gruvbox.headings.css");
+@import url("./css/_gruvbox.css");
+@import url("./layouts/homepage.css");
+@import url("./layouts/posts.css");
+
+body {
+  font-family: var(--font-family);
+}
+
+body > main {
+  max-width: 80ch;
+  margin: 0 auto;
+  padding: var(--unit) calc(2 * var(--unit));
+}
+
+.octicon {
+  vertical-align: middle;
+
+  color: var(--color-red);
+}
+

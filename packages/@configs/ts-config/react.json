@@ -1,0 +1,13 @@
+{
+  "display": "React TypeScript configuration",
+  "extends": "./common.json",
+  "include": ["src"],
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "esnext",
+    "jsx": "preserve",
+    "declaration": true,
+    "lib": ["dom", "esnext"],
+  }
+}

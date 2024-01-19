@@ -1,0 +1,55 @@
+{
+  "name": "@metalreact/swc",
+  "version": "1.0.0",
+  "description": "Metalsmith plugin to transpile TS/JSX/TSX files with SWC",
+  "license": "MIT",
+  "author": {
+    "name": "Andrei Dumitrescu",
+    "url": "https://github.com/andreidmt",
+    "email": "andrei.dumitrescu@pm.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreidmt/mono.git",
+    "directory": "packages/@metalreact/swc"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/metalreact",
+    "access": "public"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "type": "module",
+  "types": "./dist/types/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.js"
+    }
+  },
+  "scripts": {
+    "----UTIL": "",
+    "format": "eslint --fix .",
+    "----CODE-ANALYSIS": "",
+    "lint": "eslint .",
+    "typecheck": "tsc --pretty --noEmit",
+    "---BUILD": "",
+    "clean": "rm -rf dist",
+    "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist/types",
+    "prebuild": "npm run clean",
+    "build": "npm run build:types"
+  },
+  "dependencies": {
+    "@andreidmt/utils-crypto": "^1.0.0",
+    "@andreidmt/utils-fs": "^1.0.0",
+    "@andreidmt/utils-path": "^1.0.0",
+    "@andreidmt/utils-text": "^1.0.0",
+    "@swc/core": "^1.3.103"
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
+    "metalsmith": "^2.6.0"
+  }
+}

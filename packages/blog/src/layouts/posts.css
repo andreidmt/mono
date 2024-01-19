@@ -1,0 +1,14 @@
+.page.post {
+  h1.title {
+    margin-bottom: 0;
+  }
+
+  h2.description {
+    text-decoration: none;
+
+    color: var(--color-gray);
+
+    font-size: var(--font-size);
+    font-weight: normal;
+  }
+}

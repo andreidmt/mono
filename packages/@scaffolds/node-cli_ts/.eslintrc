@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "extends": [
+    "@andreidmt/eslint-config/targets/node"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {}
+}

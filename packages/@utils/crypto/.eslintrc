@@ -1,0 +1,9 @@
+{
+  "root": true,
+  "extends": ["@metalreact/eslint-config/targets/node"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+  }
+}

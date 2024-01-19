@@ -1,0 +1,24 @@
+{
+  "exclude": ["node_modules", "dist", "build", "coverage"],
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": false,
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "allowImportingTsExtensions": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "types": ["node"]
+  }
+}

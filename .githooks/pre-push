@@ -1,0 +1,16 @@
+#!/bin/bash -e
+
+currentBranch=$(git rev-parse --abbrev-ref HEAD)
+
+# If the branch doesn't exist in the remote repository (e.g. it's a new branch),
+# then use "main" as reference
+if ! git ls-remote --heads origin | grep -q "refs/heads/$currentBranch"; then
+  currentBranch='main'
+fi
+
+lastPushedCommit=$(git rev-parse "origin/$currentBranch")
+
+# Run code analysis scripts only for packages that changed since last push
+lerna run "test,typecheck,lint" --since "$lastPushedCommit" \
+  --concurrency 4 \
+  --include-dependents

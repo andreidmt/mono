@@ -1,0 +1,62 @@
+---
+title: TypeScript Mapped Types
+description: Types that are based on other types
+tags: ["post", "code", "typescript"]
+createdAt: 2021-06-02
+toc: true
+---
+
+import {Chart} from './ui/snowfall.js'
+
+<Chart />
+
+toc: {props.description}
+
+## Footnote
+
+A note[^1]
+
+[^1]: Big note.
+
+## Strikethrough
+
+~one~ or ~~two~~ tildes.
+
+## Example
+
+```ts
+type CalcTotalByFieldType = <T, F extends keyof T>(
+  field: F,
+  source: ({
+    [f in F]: number;
+  } & {
+    count: number;
+  } & T)[]
+) => number;
+
+const calcTotalByField: CalcTotalByFieldType = (field, source) =>
+  source.reduce((acc, item) => acc + item.count * item[field], 0);
+
+const cartItems = [
+  { name: 'A book', price: 2, count: 10 },
+  { name: 'Buy me', price: 5, count: 3 },
+];
+
+calcTotalByField('price', cartItems);
+// => 35
+
+calcTotalByField('name', cartItems);
+// => [error] ... Types of property 'name' are incompatible.
+// Type 'string' is not assignable to type 'number'.
+
+calcTotalByField('i dont exist :(', cartItems);
+// => [error] ... Argument of type '"i dont exist :("' is not assignable to
+// parameter of type '"count" | "price" | "name"'.
+```
+
+## Links
+
+- [Mapped Types](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html)
+- [Mastering TypeScript's Mapped Types](https://betterprogramming.pub/mastering-typescripts-mapped-types-5fa5700385eb)
+- [TypeScript 4.1's Advanced Mapped Types](https://betterprogramming.pub/typescript-4-1s-advanced-mapped-types-eba9a2ba7a9)
+

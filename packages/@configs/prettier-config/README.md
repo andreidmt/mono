@@ -1,0 +1,1 @@
+# Metalreact's Prettier configuration

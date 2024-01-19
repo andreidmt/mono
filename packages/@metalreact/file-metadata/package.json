@@ -1,0 +1,51 @@
+{
+  "name": "@metalreact/file-metadata",
+  "version": "1.0.0",
+  "description": "Metalsmith plugin for adding file metadata",
+  "license": "MIT",
+  "author": {
+    "name": "Andrei Dumitrescu",
+    "url": "https://github.com/andreidmt",
+    "email": "andrei.dumitrescu@pm.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreidmt/mono.git",
+    "directory": "packages/@metalreact/file-metadata"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/metalreact",
+    "access": "public"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "type": "module",
+  "types": "./dist/types/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/src/index.js"
+    }
+  },
+  "scripts": {
+    "----UTIL": "",
+    "format": "eslint --fix .",
+    "----CODE-ANALYSIS": "",
+    "lint": "eslint .",
+    "typecheck": "tsc --pretty --noEmit",
+    "---BUILD": "",
+    "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist/types",
+    "build:src": "swc src --out-dir dist/src",
+    "prebuild": "rm -rf dist",
+    "build": "npm run build:types && npm run build:src"
+  },
+  "dependencies": {
+    "@andreidmt/utils-text": "^1.0.0"
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
+    "metalsmith": "^2.6.0"
+  }
+}

@@ -1,0 +1,31 @@
+/* @import url("highlight.js/styles/github.css"); */
+
+code {
+  color: var(--color-fg);
+
+  font-family: var(--font-family-mono);
+  font-size: calc(var(--font-size) - 5px);
+}
+
+pre.shiki {
+  padding: calc(var(--unit) / 2) 0;
+
+  border: 1px solid var(--color-fg);
+  border-radius: var(--radius);
+  background-color: var(--color-bg-alt) !important;
+
+  line-height: 1.2;
+
+  .line-number {
+    display: inline-block;
+
+    width: 3ch;
+    margin-right: 1ch;
+    padding-right: 1ch;
+
+    user-select: none;
+    text-align: right;
+
+    color: var(--color-gray);
+  }
+}

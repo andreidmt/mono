@@ -1,0 +1,120 @@
+:root {
+  --dark0-hard: #1D2021;
+  --dark0: #282828;
+  --dark0-soft: #32302F;
+  --dark1: #3C3836;
+  --dark2: #504945;
+  --dark3: #665C54;
+  --dark4: #7C6F64;
+  --gray: #928374;
+  --light0-hard: #F9F4DA;
+  --light0: #FBF1C7;
+  --light0-soft: #F2E5BC;
+  --light1: #EBDBB2;
+  --light2: #D5C4A1;
+  --light3: #BDAE93;
+  --light4: #A89984;
+  --bright-red: #FB4934;
+  --bright-green: #B8BB26;
+  --bright-yellow: #FABD2F;
+  --bright-blue: #83A598;
+  --bright-purple: #D3869B;
+  --bright-aqua: #8EC07C;
+  --bright-orange: #FE8019;
+  --neutral-red: #CC241D;
+  --neutral-green: #98971A;
+  --neutral-yellow: #D79921;
+  --neutral-blue: #458588;
+  --neutral-purple: #B16286;
+  --neutral-aqua: #689D6A;
+  --neutral-orange: #D65D0E;
+  --faded-red: #9D0006;
+  --faded-green: #79740E;
+  --faded-yellow: #B57614;
+  --faded-blue: #076678;
+  --faded-purple: #8F3F71;
+  --faded-aqua: #427B58;
+  --faded-orange: #AF3A03;
+
+  /* general */
+  --opacity-disabled: 0.4;
+  --unit: 22px;
+  --radius: 3px;
+  --font-size: 18px;
+  --font-size-small: 14px;
+  --line-height: 1.2;
+  --box-shadow: 5px 5px 0 var(--color-fg4);
+
+  /* fonts */
+  --font-family: "NotoSans", sans-serif;
+  --font-family-mono: "JetBrainsMono Nerd Font", "Consolas", "Courier New", monospace;
+
+  /* depth */
+  --z-index-3: 300;   /* modals */
+  --z-index-2: 200;   /* fixed layout */
+  --z-index-1: 100;   /* tooltips, select options */
+  --z-index-0: 1;     /* default */
+}
+
+.gruvbox-light {
+  --color-fg: var(--dark0);
+  --color-fg4: var(--dark4);
+  --color-bg: var(--light0-hard);
+  --color-bg-alt: var(--light0);
+  --color-bg0-hard: var(--light0-hard);
+  --color-bg1: var(--light1);
+  --color-bg2: #D5C4A1;
+  --color-bg3: #BDAE93;
+  --color-bg4: var(--light4);
+  --color-gray: var(--light4);
+  --color-red: var(--neutral-red);
+  --color-red-alt: var(--faded-red);
+  --color-green: #98971A;
+  --color-yellow: #D79921;
+  --color-blue: var(--neutral-blue);
+  --color-blue-alt: var(--faded-blue);
+  --color-purple: #B16286;
+  --color-aqua: #689D6A;
+  --color-orange: #D65D0E;
+  --color-orange-alt: var(--faded-orange);
+
+  /* app */
+  --color-unfocused: var(--color-bg1);
+  --color-focused: var(--color-yellow);
+}
+
+.gruvbox-dark {
+  --color-fg: var(--light1);
+  --color-fg4: var(--light4);
+  --color-bg: var(--dark0);
+  --color-bg1: var(--dark1);
+  --color-bg2: #504945;
+  --color-bg3: #665C54;
+  --color-bg4: var(--dark4);
+  --color-gray: var(--light4);
+  --color-red: #CC241D;
+  --color-green: #98971A;
+  --color-yellow: #D79921;
+  --color-blue: var(--neutral-blue);
+  --color-blue-alt: var(--bright-blue);
+  --color-purple: #B16286;
+  --color-aqua: #689D6A;
+  --color-orange: #D65D0E;
+  --color-orange-alt: var(--bright-orange);
+
+  /* app */
+  --color-unfocused: var(--color-bg1);
+  --color-focused: var(--color-yellow);
+}
+
+.gruvbox {
+  color: var(--color-fg);
+  background: var(--color-bg);
+
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+/* Desktop first */
+@custom-media --phone screen and (max-width: 480px);
+@custom-media --tablet screen and (min-width: 481px) and (max-width: 1024px);

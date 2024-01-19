@@ -1,0 +1,23 @@
+{
+  "minify": true,
+  "sourceMaps": false,
+  "env": {
+    "mode": "entry",
+    "coreJs": 3,
+    "targets": {
+      "node": "18"
+    }
+  },
+  "jsc": {
+    "externalHelpers": true,
+    "minify": {
+      "format": {
+        "comments": "all"
+      },
+    }
+    "parser": {
+      "syntax": "typescript",
+      "dynamicImport": true
+    }
+  }
+}

@@ -1,0 +1,62 @@
+::selection {
+  color: var(--color-bg);
+  background: var(--color-fg);
+}
+
+a {
+  text-decoration: underline;
+
+  color: var(--color-orange);
+}
+
+a:hover {
+  color: var(--color-bg);
+  background-color: var(--color-fg);
+}
+
+a:visited {
+  color: var(--color-purple);
+}
+
+hr {
+  margin: calc(var(--unit) * 2 - 1px) 0;
+
+  color: var(--color-green);
+  border-bottom: 0;
+}
+
+ul {
+  margin: 0 var(--unit) var(--unit) var(--unit);
+  padding: 0;
+}
+
+ul li {
+  list-style-position: inside;
+}
+
+ul li ul {
+  margin-left: var(--unit);
+}
+
+blockquote {
+  margin: var(--unit) 0;
+  padding-left: var(--unit);
+
+  color: var(--color-gray);
+  border-left: 2px solid var(--color-gray);
+
+  font-style: italic;
+}
+
+.tag {
+  display: inline-block;
+
+  padding: 0 calc(var(--unit) / 2);
+
+  color: var(--color-red-alt);
+  background-color: var(--color-bg-alt);
+}
+
+.tag + .tag {
+  margin-left: var(--unit);
+}

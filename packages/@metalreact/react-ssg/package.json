@@ -1,0 +1,61 @@
+{
+  "name": "@metalreact/react-ssg",
+  "version": "1.0.0",
+  "description": "Metalsmith plugin for rendering React components to HTML",
+  "license": "MIT",
+  "author": {
+    "name": "Andrei Dumitrescu",
+    "url": "https://github.com/andreidmt",
+    "email": "andrei.dumitrescu@pm.me"
+  },
+  "repository": {
+    "url": "git+https://github.com/andreidmt/mono.git",
+    "directory": "packages/@metalreact/react-ssg"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "type": "module",
+  "types": "./dist/types/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/src/index.js"
+    }
+  },
+  "scripts": {
+    "----UTIL": "",
+    "format": "eslint --fix .",
+    "----CODE-ANALYSIS": "",
+    "lint": "eslint .",
+    "typecheck": "tsc --pretty --noEmit",
+    "---BUILD": "",
+    "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist/types",
+    "build:src": "swc src --out-dir dist/src",
+    "prebuild": "rm -rf dist",
+    "build": "npm run build:types && npm run build:src"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ]
+  },
+  "dependencies": {
+    "@andreidmt/utils-text": "^1.0.0",
+    "@andreidmt/utils-import": "^1.0.0",
+    "@andreidmt/utils-metalsmith": "^1.0.0",
+    "@andreidmt/utils-path": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18"
+  },
+  "peerDependencies": {
+    "metalsmith": "^2.6.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
+}

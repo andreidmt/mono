@@ -1,0 +1,33 @@
+---
+title: Cross-Functional vs Siloed or Uni-Disciplinary tech teams
+tags: ["post", "team", "cross-functional", "siloed"]
+createdAt: 2023-06-02
+---
+
+1. In a Cross-functional Tech team the game is "how do we fix this issue"
+2. In a Siloed Uni-disciplinary team the game is "on who's JIRA board do we put this ticket to get unblocked"
+
+```text
+graph TD
+
+subgraph "Cross-functional Tech Team"
+ProblemCFTT["Problem"] --> TeamCFTT["How do we fix?"]
+TeamCFTT --> T1["Team Member 1"]
+TeamCFTT --> T2["Team Member 2"]
+TeamCFTT --> T3["Team Member 3"]
+TeamCFTT --> T4["Team Member 4"]
+end
+
+```
+
+```text
+graph TD
+subgraph "Siloed Uni-Disciplinary Tech Team"
+ProblemSUT["Problem"] --> TeamCFTT["How do we fix?"]
+TeamCFTT["How do we fix?"] --> TeamSUT["On who's JIRA board do we put a ticket?"]
+TeamSUT --> J1["JIRA Board 1"]
+TeamSUT --> J2["JIRA Board 2"]
+TeamSUT --> J3["JIRA Board 3"]
+TeamSUT --> J4["JIRA Board 4"]
+end
+```

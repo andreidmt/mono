@@ -1,0 +1,10 @@
+{
+  "display": "NodeJS TypeScript configuration",
+  "extends": "./common.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "esnext",
+    "lib": ["esnext"]
+  }
+}

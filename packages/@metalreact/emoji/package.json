@@ -1,0 +1,54 @@
+{
+  "name": "@metalreact/emoji",
+  "version": "1.0.0",
+  "description": "Metalsmith plugin to convert emoji shortcodes to unicode characters",
+  "license": "MIT",
+  "author": {
+    "name": "Andrei Dumitrescu",
+    "url": "https://github.com/andreidmt",
+    "email": "andrei.dumitrescu@pm.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreidmt/mono.git",
+    "directory": "packages/@metalreact/emoji"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/metalreact",
+    "access": "public"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "type": "module",
+  "types": "./dist/types/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.js"
+    }
+  },
+  "scripts": {
+    "----UTIL": "",
+    "format": "eslint --fix .",
+    "----CODE-ANALYSIS": "",
+    "lint": "eslint .",
+    "typecheck": "tsc --pretty --noEmit",
+    "---BUILD": "",
+    "clean": "rm -rf dist",
+    "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist/types",
+    "prebuild": "npm run clean",
+    "build": "npm run build:types"
+  },
+  "dependencies": {
+    "@primer/octicons": "^19.8.0",
+    "emojione": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/emojione": "^2.2.9",
+    "@types/primer__octicons": "^19.6.3"
+  },
+  "peerDependencies": {
+    "metalsmith": "^2.6.0"
+  }
+}

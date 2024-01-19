@@ -1,0 +1,56 @@
+{
+  "name": "@andreidmt/eslint-config",
+  "version": "1.0.0",
+  "description": "Andrei Dumitrescu's ESLint config",
+  "license": "MIT",
+  "author": {
+    "name": "Andrei Dumitrescu",
+    "url": "https://github.com/andreidmt",
+    "email": "andrei.dumitrescu@pm.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreidmt/mono.git",
+    "directory": "packages/@configs/eslint-config"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/andreidmt",
+    "access": "public"
+  },
+  "scripts": {
+    "----UTIL": "",
+    "format": "eslint --fix .",
+    "----CODE-ANALYSIS": "",
+    "lint.js": "eslint --quiet .",
+    "lint.md": "markdownlint '*.md' --ignore CHANGELOG.md",
+    "lint": "npm run lint.js && npm run lint.md"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --quiet"
+    ]
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "^27.6.3",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-no-inferred-method-name": "^2.0.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-jsdoc": "^48.0.2",
+    "eslint-plugin-testing-library": "^6.2.0",
+    "eslint-plugin-unicorn": "^50.0.1"
+  },
+  "peerDependencies": {
+    "eslint": "^8.5.0"
+  },
+  "devDependencies": {}
+}

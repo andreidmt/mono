@@ -1,0 +1,32 @@
+# Logs
+npm-debug.log*
+.log
+
+# Dependency directories
+node_modules/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# dotenv environment variables file
+.env
+
+# Typescript
+*.tsbuildinfo
+
+# Coveralls
+.coveralls.yml
+coverage
+
+# Build
+dist
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# Cache
+.cache
+.eslintcache
+.npm

@@ -1,0 +1,7 @@
+{
+  "extends": "@andreidmt/ts-config/react",
+  "include": ["src"],
+  "compilerOptions": {
+    "rootDir": "./",
+  }
+}

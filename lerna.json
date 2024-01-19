@@ -1,0 +1,17 @@
+{
+  "version": "independent",
+  "changelogPreset": {
+    "name": "conventionalcommits"
+  },
+  "command": {
+    "version": {
+      "allowBranch": "main",
+      "conventionalCommits": true,
+      "message": "chore(release): publish [skip ci]"
+    },
+    "publish": {
+      "allowBranch": "main",
+      "conventionalCommits": true
+    }
+  }
+}

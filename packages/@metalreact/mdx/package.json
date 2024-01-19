@@ -1,0 +1,55 @@
+{
+  "name": "@metalreact/mdx",
+  "version": "1.0.0",
+  "description": "Metalsmith plugin to convert MDX to JS",
+  "license": "MIT",
+  "author": {
+    "name": "Andrei Dumitrescu",
+    "url": "https://github.com/andreidmt",
+    "email": "andrei.dumitrescu@pm.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreidmt/mono.git",
+    "directory": "packages/@metalreact/mdx"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/metalreact",
+    "access": "public"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "type": "module",
+  "types": "./dist/types/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.js"
+    }
+  },
+  "scripts": {
+    "----UTIL": "",
+    "format": "eslint --fix .",
+    "----CODE-ANALYSIS": "",
+    "lint": "eslint .",
+    "typecheck": "tsc --pretty --noEmit",
+    "---BUILD": "",
+    "clean": "rm -rf dist",
+    "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist/types",
+    "prebuild": "npm run clean",
+    "build": "npm run build:types"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^3.0.0",
+    "@andreidmt/utils-crypto": "^1.0.0",
+    "@andreidmt/utils-fs": "^1.0.0",
+    "@andreidmt/utils-path": "^1.0.0",
+    "remark-gfm": "^4.0.0"
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
+    "metalsmith": "^2.6.0"
+  }
+}
